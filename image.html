@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Album</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Image Album</h1>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Image 1">
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x400" alt="Image 2">
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="Image 3">
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/200x300" alt="Image 4">
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x300" alt="Image 5">
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x150" alt="Image 6">
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Image Album. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
