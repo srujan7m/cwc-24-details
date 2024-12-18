@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Album</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
@@ -14,35 +15,90 @@
 
         header {
             background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
+            color: white;
             text-align: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 0;
-        }
-
-        .card img {
-            width: 100%;
-            height: auto;
-            display: block;
+            padding: 20px 0;
         }
 
         footer {
             background-color: #333;
-            color: #fff;
+            color: white;
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
         }
+
+        /* Container to center the grid */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Grid Layout for Images */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        /* Card styles */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        /* Ensure the images are resizable */
+        .card img {
+            width: 100%;  /* Make the image fill the container */
+            height: 300px;
+            display: block;
+            border-bottom: 5px solid #f5f5f5;
+        }
+
+        /* Custom classes to adjust individual image sizes */
+        .img-size-1 {
+            width: 600px;  /* Set width of Image 1 */
+        }
+
+        .img-size-2 {
+            width: 400px;  /* Set width of Image 2 */
+        }
+
+        .img-size-3 {
+            width: 500px;  /* Set width of Image 3 */
+        }
+
+        .img-size-4 {
+            width: 350px;  /* Set width of Image 4 */
+        }
+
+        .img-size-5 {
+            width: 450px;  /* Set width of Image 5 */
+        }
+
+        .img-size-6 {
+            width: 600px;  /* Set width of Image 6 */
+        }
+
+        /* Hover effect for images */
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            header, footer {
+                padding: 15px 0;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -53,23 +109,24 @@
 
 <div class="container">
     <div class="grid">
+        <!-- Each image has a different custom class to set the size -->
         <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Image 1">
+            <img src="https://i.pinimg.com/474x/9e/c1/97/9ec1971ecd451cbfb55a530f9e943742.jpg" alt="Placeholder Image 1" class="img-size-1">
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/300x400" alt="Image 2">
+            <img src="https://via.placeholder.com/300x400" alt="Placeholder Image 2" class="img-size-2">
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="Image 3">
+            <img src="https://via.placeholder.com/400x300" alt="Placeholder Image 3" class="img-size-3">
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/200x300" alt="Image 4">
+            <img src="https://via.placeholder.com/200x300" alt="Placeholder Image 4" class="img-size-4">
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="Image 5">
+            <img src="https://via.placeholder.com/300x300" alt="Placeholder Image 5" class="img-size-5">
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/300x150" alt="Image 6">
+            <img src="https://via.placeholder.com/300x150" alt="Placeholder Image 6" class="img-size-6">
         </div>
     </div>
 </div>
