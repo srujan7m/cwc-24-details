@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tickets Corner</title>
+<style type="text/css">
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        background-color:#e0f7fa;
+    }
+a{
+    color: orange;
+}
+.jersey{
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    border-radius: 10%;
+}
+.jersey:hover{
+    background-color: #80deea;
+}
+.jersey2:hover{
+    background-color: #80deea;
+}
+.jersey2{
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    border-radius: 10%;
+    position: absolute;
+    top: 700px;
+}
+img{
+    height: 250px;
+    width: 300px;
+    border-radius: 10%;
+    background: transparent;
+}
+button{
+    height: 30px;
+    width: 150px;
+    border-radius: 6%;
+}
+button:hover
+{
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+ #dialogBox {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            height: 80%;
+        }
+        #dialogBox button {
+            margin-top: 10px;
+        }
+        #image{
+            background-color: darkred;
+        }
+</style>
+
+<body>
+ <nav style="background-color: rgba(0, 0, 0, 0.6);height: 60px;">
+        <a href="#" style="left: 450px;position: absolute;top: -6px;"><h2>Home</h2></a>
+            <a href="#" style="left: 550px;position: absolute;top: -6px;"><h2>About</h2></a>
+            <a href="#" style="right: 550px;position: absolute;top: -6px;"><h2>Shop</h2></a>
+            <a href="#" style="right: 435px;position: absolute;top: -6px;"><h2>Contact</h2></a>
+            <img src="C:\Users\Dell\OneDrive\Documents\GitHub\project\Images\logo.png" style="border-radius: 50%;height: 56px;width: 56px;position: absolute;left: 750px;">
+        
+    </nav>
+
+     <h1 id="heading" style="
+        font-size: 3em;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        color: #1e3d58;
+        font-weight: bold;
+        margin-top: 50px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background: linear-gradient(45deg, #006bb3, #0080ff);
+       background-clip: text;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       
+    ">
+        Jersey's
+    </h1>
+<div class="jersey" style="position: relative;left: 80px;"><img src="C:\Users\Dell\OneDrive\Documents\GitHub\project\Images\ind.jpg" >Out of stock</a></div>
+<div class="jersey" style="position: relative;left: 420px;top: -304px;"><img src="C:\Users\Dell\OneDrive\Documents\GitHub\project\Images\nz.jpeg" >Out of stock</div>
+<div class="jersey" style="position: relative;left: 760px;top: -604px;"><img src="C:\Users\Dell\OneDrive\Documents\GitHub\project\Images\aus.jpg" >Out of stock</a></div>
+<div class="jersey" style="position: relative;left: 1100px;top: -908px;"><img src="C:\Users\Dell\OneDrive\Documents\GitHub\project\Images\wi.jpeg" >Out of stock</a></div>
+
+<h1 id="heading" style="
+        font-size: 3em;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        color: #1e3d58;
+        font-weight: bold;
+        margin-top: 50px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background: linear-gradient(45deg, #006bb3, #0080ff);
+       background-clip: text;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 550px;
+        width: 100%;
+       
+    ">
+        Accessories
+    </h1>
+    <div class="jersey2" style="position:absolute;left: 100px;"><img src="C:\Users\Dell\OneDrive\Documents\GitHub\project\Images\bat.jpeg" >Out of stock</a></div></div>
+    <div class="jersey2" style="position:absolute;left: 440px;"><img src="C:\Users\Dell\OneDrive\Documents\GitHub\project\Images\glv.jpeg" >Out of stock</a></div></div>
+    <div class="jersey2" style="position:absolute;right: 440px;"><img src="C:\Users\Dell\OneDrive\Documents\GitHub\project\Images\kit.jpg" >Out of stock</a></div></div>
+    <div class="jersey2" style="position:absolute;right: 100px;"><img src="C:\Users\Dell\OneDrive\Documents\GitHub\project\Images\cup.jpeg" >Out of stock</a></div></div>
+
+    <h3 id="heading" style="
+        font-size: 3em;
+        font-family: 'Arial', sans-serif;
+        text-align: left;
+        color: tomato;
+        font-weight: ;
+        margin-top: 50px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background: linear-gradient(45deg, #006bb3, #0080ff);
+       background-clip: text;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 1030px;
+        width: 100%;
+       
+    ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get your jersey-
+    </h3>
+    <h1 style="position:relative;top: -230px;left: 40px;">Enter your name:</h1>
+    <input type="text" id="name" placeholder ="Enter here" style="position:relative;top: -240px;width: 40%;height: 6%;left: 40px;">
+    <button  onclick="openDialog()" style="position:relative;top: -200px;left: -380px;">Generate</button>
+
+    <!-- Dialog Box -->
+    <div id="dialogBox">
+        <p id="greetingMessage">
+        </p>
+         <button onclick="closeDialog()">Close</button>
+             <img src="C:\Users\Dell\OneDrive\Documents\GitHub\project\Images\jersey.png" style="background-color:red;width:300px;height:300px;background: transparent;">
+
+    </div>
+ <div id="dialogBox">
+       
+        <p id="greetingMessage"></p>
+    </div>
+    <script>
+        // Function to open the dialog box and display the name
+        function openDialog() {
+            // Get the entered name
+            var name = document.getElementById('name').value;
+
+            
+            
+            // If name is entered, display it in the dialog box
+            if(name) {
+                document.getElementById('greetingMessage').innerText = 'Hi, ' + name +  '! Congrats on getting your special edition jersey signed by the Indian team' ;
+                document.getElementById('dialogBox').style.display = 'block';
+            } else {
+                alert('Please enter your name first!');
+            }
+        }
+           document.getElementById('image')
+        // Function to close the dialog box
+        function closeDialog() {
+            document.getElementById('dialogBox').style.display = 'none';
+        }
+    </script>
+    <img src="C:\Users\Dell\OneDrive\Documents\GitHub\project\Images\adv.png" style="width: 100%;height: 40%;border-radius: 1%;">
+
+
+</body>
+</html>
